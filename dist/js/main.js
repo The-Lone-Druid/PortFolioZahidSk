@@ -37,3 +37,16 @@ function toggleMenu() {
 
 //for footer
 document.getElementById("footer").innerHTML = "<a href=#>Copyright &copy; 2020 { Web <span class=text-secondary>Brewery</span> }</a>";
+
+
+function changeCSS(cssFile, cssLinkIndex) {
+
+    var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+
+    var newlink = document.createElement("link");
+    newlink.setAttribute("rel", "stylesheet");
+    newlink.setAttribute("type", "text/css");
+    newlink.setAttribute("href", cssFile);
+
+    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+}
