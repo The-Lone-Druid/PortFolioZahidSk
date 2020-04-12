@@ -34,3 +34,6 @@ function toggleMenu() {
 
     }
 }
+
+//for footer
+document.getElementById("footer").innerHTML = "<a href=#>Copyright &copy; 2020 { Web <span class=text-secondary>Brewery</span> }</a>";
