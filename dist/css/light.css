@@ -5,14 +5,22 @@
   top: 20px;
   left: 20px;
   padding: 10px;
-  background: black;
 }
 
-.theme-btn a label {
-  padding-left: 5px;
+#change-theme-light {
   color: white;
-  font-weight: bold;
+  background: none;
+  border: none;
+  transform: rotate(180deg);
+  display: none;
 }
+
+#change-theme-dark{
+  color: black;
+  background: none;
+  border: none;
+}
+
 
 .menu-btn {
   position: absolute;
@@ -298,7 +306,7 @@ main {
 
 @media screen and (max-width: 768px) {
   body#bg-image {
-    background: url(../img/background\ small.jpg);
+    background: url(../img/background-sm.jpg);
     background-attachment: fixed;
     background-size: cover; }
 

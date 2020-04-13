@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/css/dark.css">
+    <link id="styleSheetTheme" rel="stylesheet" href="dist/css/dark.css">
     <!--Fontawsome Links-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <title>My Works</title>
 </head>
 <body>
     <header>
         <div class="theme-btn">
-            <a href="#" id="dark-theme" title="Dark Theme"><label>Change Theme</label></a>
-            <a href="#" id="light-theme" title="Light Theme"><label>Chagnge Theme</label></a>
+            <button id="change-theme-light"><i class="fa fa-toggle-on fa-2x""></i></button>
+            <button id="change-theme-dark"><i class="fa fa-toggle-on fa-2x"></i></button>
         </div>
         <div class="menu-btn">
             <div class="btn-line"></div>
@@ -102,8 +104,7 @@
 
     <footer id="footer"></footer>
 
-    <script src="dist/js/main.js">
-
-    </script>
+    <script src="dist/js/main.js"></script>
+    <script src="dist/js/change-theme.js"></script>
 </body>
 </html>

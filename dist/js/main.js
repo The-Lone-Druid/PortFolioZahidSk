@@ -42,44 +42,5 @@ function toggleMenu() {
 document.getElementById("footer").innerHTML = "<a href=#>Copyright &copy; 2020 { Web <span class=text-secondary>Brewery</span> }</a>";
 
 
-//Theme Selector using jQuery.
-
-const darkTheme = document.querySelector('#dark-theme'); // for Dark Theme
-const lightTheme = document.querySelector('#light-theme'); // for Light Theme
-
-darkTheme.addEventListener('click',changeToDark); //check if the element is clicked
-lightTheme.addEventListener('click',changeToLight); //------------/---------------
 
 
-//if darkTheme was clicked, call this function
-
-function changeToDark() {
-
-    var oldlink = document.getElementsByTagName("link").item(0);
-    
-    var newlink = document.createElement("link");
-    newlink.setAttribute("rel", "stylesheet");
-    newlink.setAttribute("type", "text/css");
-    newlink.setAttribute("href", 'dist/css/dark.css');
-    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
-
-    darkTheme.style.display = "none";
-    lightTheme.style.display = "block";
-}
-
-
-//else call this function
-
-function changeToLight() {
-
-    var oldlink = document.getElementsByTagName("link").item(0);
-    
-    var newlink = document.createElement("link");
-    newlink.setAttribute("rel", "stylesheet");
-    newlink.setAttribute("type", "text/css");
-    newlink.setAttribute("href", 'dist/css/light.css');
-
-    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
-    lightTheme.style.display = "none";
-    darkTheme.style.display = "block";
-}
