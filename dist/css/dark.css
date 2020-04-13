@@ -268,8 +268,8 @@ main {
 }
 
 .works > .workInfo h2{
-  border-bottom: 2px solid white;
-  color: white;
+  background: white;
+  color: black;
   font-weight: bold;
 }
 
