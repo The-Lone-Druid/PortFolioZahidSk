@@ -4,7 +4,14 @@
   position: absolute;
   top: 20px;
   left: 20px;
-  padding: 5px;
+  padding: 10px;
+  background: black;
+}
+
+.theme-btn a label {
+  padding-left: 5px;
+  color: white;
+  font-weight: bold;
 }
 
 .menu-btn {
@@ -267,9 +274,9 @@ main {
 }
 
 .works > .workInfo h2{
+  background: black;
   color: white;
   font-weight: bold;
-  background: black;
 }
 
 .works > .workInfo img{
@@ -291,7 +298,7 @@ main {
 
 @media screen and (max-width: 768px) {
   body#bg-image {
-    background: url(../img/background-sm.jpg);
+    background: url(../img/background\ small.jpg);
     background-attachment: fixed;
     background-size: cover; }
 

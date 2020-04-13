@@ -4,7 +4,14 @@
   position: absolute;
   top: 20px;
   left: 20px;
-  padding: 5px;
+  padding: 10px;
+  background: white;
+}
+
+.theme-btn a label {
+  color: black;
+  font-weight: bold;
+  padding-left: 5px;
 }
 
 #dark-theme {
@@ -263,6 +270,7 @@ main {
   text-align: center;
   background: rgba(73, 73, 73, 0.5);
   border: 2px solid white;
+  border-radius: 5px;
   padding: 5px;
   border-bottom: 5px solid #eece1a;
 }
@@ -291,7 +299,7 @@ main {
 
 @media screen and (max-width: 768px) {
   body#bg-image {
-    background: url(../img/background-sm.jpg);
+    background: url(../img/background\ small.jpg);
     background-attachment: fixed;
     background-size: cover; }
 
