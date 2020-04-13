@@ -267,9 +267,9 @@ main {
 }
 
 .works > .workInfo h2{
-  border-bottom: 2px solid black;
-  color: black;
+  color: white;
   font-weight: bold;
+  background: black;
 }
 
 .works > .workInfo img{
