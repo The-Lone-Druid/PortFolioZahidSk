@@ -62,6 +62,9 @@ function changeToDark() {
     newlink.setAttribute("type", "text/css");
     newlink.setAttribute("href", 'dist/css/dark.css');
     document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+
+    darkTheme.style.display = "none";
+    lightTheme.style.display = "block";
 }
 
 
@@ -77,4 +80,6 @@ function changeToLight() {
     newlink.setAttribute("href", 'dist/css/light.css');
 
     document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+    lightTheme.style.display = "none";
+    darkTheme.style.display = "block";
 }
