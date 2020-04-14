@@ -1,3 +1,6 @@
+//Single and Double Togglers to toggle between themes
+//toggleAttrVal is not used now but will be used in further js
+
 $.fn.toggleAttrVal = function(attr, val1, val2) {
     var test = $(this).attr(attr);
     if ( test === val1) {
@@ -23,6 +26,7 @@ $.fn.toggleAttrVal = function(attr, val1, val2) {
     });
   };
 
+//jQuery function to change theme to light
 
 $('#change-theme-light').click(function() {
 
@@ -35,6 +39,9 @@ $('#change-theme-light').click(function() {
     console.log("set to true");
 });
 
+
+//jQuery function to change theme to dark
+
 $('#change-theme-dark').click(function() {
 
     $('#styleSheetTheme').toggleAttr('href', "dist/css/dark.css");
@@ -46,6 +53,8 @@ $('#change-theme-dark').click(function() {
     console.log("set to false");
 });
 
+
+//To store the current theme
 
 if(JSON.parse(localStorage.getItem("light-theme-enabled"))) {
     $("#styleSheetTheme").toggleAttr("href","dist/css/light.css");
