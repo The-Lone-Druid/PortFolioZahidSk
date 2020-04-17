@@ -1,0 +1,577 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:600);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+* {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+    height: 2000px;
+}
+
+/*Set a Background Image*/
+#bg-image {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 30%, #ff6d00 55%), url(../img/background-large.jpeg) center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#bg-image {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 200;
+}
+
+/*CSS for menu button*/
+
+.menuBtn {
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    z-index: 300;
+    transition: all .5s ease-out;
+    cursor: pointer;
+}
+
+.menuBtn .btnLine {
+    height: 3px;
+    width: 35px;
+    background-color: white;
+    margin-top: 7px;
+    transition: all .5s ease-out;
+}
+
+/*Animating Menu Button*/
+
+.menuBtn.close {
+    transform: rotate(180deg);
+    z-index: 10000;
+}
+
+.menuBtn.close .btnLine:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menuBtn.close .btnLine:nth-child(2) {
+    opacity: 0;
+}
+
+.menuBtn.close .btnLine:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/*CSS for Side Menu*/
+
+.menu-nav {
+    position: fixed;
+    top: 0;
+    width: 280px;
+    height: 100%;
+    background: rgb(255, 253, 253);
+    box-shadow: 0 0 10px rgba(100, 100, 100, 0.8);
+    transition: all .3s ease-out;
+    margin: 0;
+    padding: 0;
+    z-index: 999;
+}
+
+.author-image {
+    border: 5px solid #ff6d00;
+    height: 30vh;
+    margin: 35px;
+    margin-top: 50px;
+    background: url(../img/portrait.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+/*Hiding and Viewing the menu*/
+
+.menu-nav.show {
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+}
+
+.menu-nav {
+    transform: translate3d(-100%, 0, 0);
+    transition: all .5s ease-out;
+}
+
+.menu-nav .nav-item {
+    border-bottom: 1px solid #eee;
+    transition: .3s;
+    margin: 0;
+    text-align: center;
+}
+
+.menu-nav .nav-item:hover {
+    background: rgba(230, 230, 230, 0.8);
+}
+
+.menu-nav .nav-item .nav-link {
+    text-decoration: none;
+    padding: 1em 2em;
+    color: #ff6d00;
+    font-weight: 500;
+    font-size: 1.10em;
+    display: block;
+}
+
+.container {
+    margin: 0px auto;
+    width: 80%;
+    padding: 10px;
+}
+
+/*Hero Information CSS*/
+
+/* ================
+    Hero section
+    ================ */
+    .hero {
+        height: 100vh;
+        /* background-image & background-color */
+        background: linear-gradient(to left, rgba(255, 255, 255, 0) 30%, #ff6d00 55%), url("../img/background-large.jpeg") center center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 200;
+      }
+      .hero h4 {
+        color: rgba(255, 255, 255, 0.7);
+        font-family: "Pacifico", cursive;
+        font-size: 1.5em;
+        padding-bottom: 1em;
+      }
+      .hero h1 {
+        /* Your name color here */
+        color: #fff;
+        font-family: "Raleway", sans-serif;
+        font-size: 3.5em;
+        font-weight: 100;
+        letter-spacing: 2px;
+      }
+      .hero h3 {
+        /* Your position title color here */
+        color: rgba(255, 255, 255, 0.9);
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.5em;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+      .hero .social {
+        padding-top: 3em;
+      }
+      .hero .social li {
+        display: inline-block;
+        margin: 0 10px;
+      }
+      .hero .social li a {
+        text-decoration: none;
+      }
+      .hero .social li a i {
+        font-size: 1.75em;
+        color: #fff;
+        transition: color 0.3s;
+      }
+      .hero .social li a i:hover {
+        color: #000;
+      }
+      .hero .toNext {
+        margin-top: 3em;
+      }
+      .hero .toNext .next {
+        font-size: 3.5em;
+        color: rgba(255, 255, 255, 0.8);
+        cursor: pointer;
+        position: relative;
+        left: 16%;
+        transition: color 0.3s;
+      }
+      .hero .toNext .next:hover {
+        color: #000;
+      }
+      
+      /* styles for mobile screen devices */
+      @media (max-width: 767px) {
+        .hero {
+          background: linear-gradient(rgba(255,109,0, 0.7), rgba(255,109,0, 0.7)), url("../img/background-large.jpeg") center center no-repeat;
+          background-size: cover;
+          background-attachment: scroll;
+        }
+      }
+      /* General styles for all sections */
+      .section-outline {
+        padding: 4em 0;
+      }
+      .section-outline .section-header {
+        margin-bottom: 4em;
+      }
+      .section-outline .section-header .title {
+        font-size: 3em;
+        font-weight: 600;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 4px;
+        color: #333;
+        text-shadow: 6px 6px 8px rgba(100, 100, 100, 0.5);
+      }
+      .section-outline .section-header .title::after {
+        content: "";
+        display: block;
+        width: 70px;
+        height: 4px;
+        margin: .5em auto;
+        background-color: #888;
+      }
+      
+
+/*Screen VH < 400*/
+
+@media only screen and (max-width: 400px) {
+    #bg-image {
+        background: linear-gradient(rgba(98, 0, 234, 0.7), rgba(98, 0, 234, 0.7)), url(../img/background-large.jpeg) center center no-repeat;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+
+    .container {
+        width: 75%;
+    }
+
+    .author-information .social {
+        padding: 0;
+    }
+
+}
+
+
+/*Mian body CSS*/
+
+/*Color Switcher CSS*/
+
+.color-switcher {
+    text-align: center;
+    position: fixed;
+    right: 0px;
+    top: 30vh;
+    width: 175px;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+    z-index: 1;
+    transform: translate3d(100%, 0, 0);
+    transition: 0.3s;
+  }
+
+.color-switcher.show {
+    transform: translate3d(0, 0, 0);
+}
+
+.color-switcher .switcher-btn {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: #ff6d00;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    z-index: 200;
+}
+
+.color-switcher .switcher-btn .gear-check {
+    color: #fff;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.color-switcher .color-option .color-nav {
+    border-top: .5px solid grey;
+    display: inline-flex;
+    flex-wrap: wrap;
+    letter-spacing: 10px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.color-switcher .color-option .color-nav li {
+    padding: 5px;
+    margin-left: 6px;
+}
+
+/* General styles for all sections */
+.section-outline {
+    padding: 4em 0;
+  }
+  .section-outline .section-header {
+    margin-bottom: 4em;
+  }
+  .section-outline .section-header .title {
+    font-size: 3em;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 4px;
+    color: #333;
+    text-shadow: 6px 6px 8px rgba(100, 100, 100, 0.5);
+  }
+  .section-outline .section-header .title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    margin: .5em auto;
+    background-color: #888;
+  }
+  
+  /* ================
+      About section
+      ================ */
+  .about .section-body .profile-pic {
+    position: relative;
+    margin-bottom: 5em;
+  }
+  .about .section-body .profile-pic img {
+    position: relative;
+    margin: 2em auto;
+    max-height: 400px;
+    max-width: 90%;
+    box-shadow: 0 15px 30px rgba(100, 100, 100, 0.5);
+  }
+  .about .section-body .overview-title {
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 3px;
+  }
+  .about .section-body .about-p {
+    font-size: 16px;
+    color: #888;
+    line-height: 1.75;
+  }
+  .about .section-body .about-info {
+    margin: 2em 0;
+  }
+  .about .section-body .about-info .info-container {
+    padding: 1em;
+    transition: all 0.4s;
+  }
+  .about .section-body .about-info .info-container:hover {
+    box-shadow: 0 0 10px rgba(100, 100, 100, 0.5);
+  }
+  .about .section-body .about-info .info-container:hover .info i {
+    color: #888;
+  }
+  .about .section-body .about-info .info i {
+    font-size: 2.5em;
+    color: #888;
+  }
+  .about .section-body .about-info .info h4 {
+    color: #333;
+  }
+  .about .section-body .about-info .info h5 {
+    color: #888;
+    font-size: 16px;
+  }
+  
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .info-container {
+      padding: 0;
+    }
+    .info-container .info .mail {
+      font-size: 12px;
+      text-align: left;
+    }
+  }
+  /* ================
+      Skills section
+      ================ */
+  .skills {
+    background-color: #f5f5f5;
+  }
+  .skills .section-body .skill-title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 1.25em;
+  }
+  .skills .section-body .progress {
+    height: 12px;
+    width: 70%;
+    border-radius: 30px;
+    background-color: #ccc;
+    margin-bottom: 2em;
+  }
+  .skills .section-body .progress .progress-bar {
+    background-color: #888;
+    border-radius: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .skills .section-body .progress {
+      width: 80%;
+      margin-bottom: 3em;
+    }
+  }
+  /* ==================
+      Services section
+      ================== */
+  .services .service-wrapper {
+    margin-bottom: 4em;
+  }
+  .services .service-wrapper .service .service-icon {
+    font-size: 3.5em;
+    color: #888;
+  }
+  .services .service-wrapper .service .service-title {
+    font-size: 1.75em;
+    font-weight: 600;
+    font-family: "Raleway", sans-serif;
+    color: #333;
+  }
+  .services .service-wrapper .service .service-p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #888;
+  }
+  
+  /* ================
+      Contact section
+      ================ */
+  .contact {
+    /* Background-image for social section here */
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../img/social-3.jpeg") center center no-repeat;
+    background-size: cover;
+  }
+  .contact .social-media p {
+    color: #333;
+    font-size: 1.4em;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 1em;
+  }
+  .contact .social-media .social li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .contact .social-media .social li a {
+    text-decoration: none;
+  }
+  .contact .social-media .social li a i {
+    font-size: 2em;
+    color: #888;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #888;
+    border-radius: 50%;
+    line-height: 48px;
+    transition: all 0.3s;
+  }
+  .contact .social-media .social li a i:hover {
+    background-color: #888;
+    color: #fff;
+  }
+  
+  @media (max-width: 480px) {
+    .contact .social-media p {
+      font-size: 1.2em;
+    }
+    .contact .social-media .social li {
+      margin: 0 6px;
+    }
+    .contact .social-media .social li a i {
+      font-size: 1.5em;
+      width: 38px;
+      height: 38px;
+      line-height: 35px;
+    }
+  }
+  /* ================
+      Footer section
+      ================ */
+  footer {
+    padding: 1.5em 0;
+    background-color: #fff;
+  }
+  footer .footer-title {
+    margin: 0;
+    color: #333;
+  }
+  footer .footer-title .name {
+    color: #888;
+  }
+  
+  /*Behind the scenes*/
+  /* General styles for all sections */
+.section-outline .section-header .title::after {
+    background-color: #ff6d00; }
+  
+  /* ================
+      About section
+      ================ */
+  .about .section-body .about-info .info-container:hover .info i {
+    color: #ff6d00; }
+  
+  /* ================
+      Skills section
+      ================ */
+  .skills .section-body .progress .progress-bar {
+    background-color: #ff6d00; }
+  
+  /* ==================
+      Services section
+      ================== */
+  .services .service-wrapper .service .service-icon {
+    color: #ff6d00; }
+  
+  /* =================
+      my-work section
+      ================= */
+  .myWork .section-body .filters li button {
+    border-bottom: 2px solid #ff6d00; }
+    .myWork .section-body .filters li button:focus, .myWork .section-body .filters li button:hover {
+      background-color: #ff6d00; }
+  .myWork .section-body .card .card-img .overlay a i:hover {
+    color: #ff6d00; }
+  
+  /* ================
+      Contact section
+      ================ */
+    .contact .social-media .social li a i {
+      color: #ff6d00;
+      border: 2px solid #ff6d00; }
+      .contact .social-media .social li a i:hover {
+        background-color: #ff6d00; }
+
+        /* =====================
+    Scroll-to-top button
+    =====================*/
+#scroll-top {
+    position: fixed;
+    bottom: 1.5em;
+    right: 2em;
+    cursor: pointer;
+    z-index: 1;
+  }
+  #scroll-top i {
+    font-size: 3em;
+    color: #333;
+    transition: all .2s;
+  }
+  #scroll-top i:hover {
+    color: #888;
+  }
+  
+  /* ================
+      Footer section
+      ================ */
+  footer .footer-title .name {
+    color: #ff6d00; }

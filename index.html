@@ -3,79 +3,428 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="styleSheetTheme" rel="stylesheet" href="dist/css/dark.css">
-    <!--Fontawsome Links-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-    <title>Welcome To My Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- favIcon -->
+    <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link id="styleSheetTheme" rel="stylesheet" href="css/darkblue.css">
+    <title>Zahid Shaikh | Portfolio</title>
 </head>
-<body id="bg-image">
-    <header>
-        <div class="theme-btn">
-            <button id="change-theme-light"><i class="fa fa-toggle-on fa-2x""></i></button>
-            <button id="change-theme-dark"><i class="fa fa-toggle-on fa-2x"></i></button>
-        </div>
-        <div class="menu-btn">
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-        </div>
-        <nav class="menu">
-            <div class="menu-branding">
-                <div class="portrait"></div>
+<body>
+
+    <header id="bg-image">
+        <nav>
+            <div class="menuBtn">
+                <div class="btnLine"></div>
+                <div class="btnLine"></div>
+                <div class="btnLine"></div>
             </div>
+
             <ul class="menu-nav">
-                <li class="nav-item current">
-                    <a href="index.html" class="nav-link">
-                        Home
+                <div class="author-image">
+
+                </div>
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">
+                        Home                        
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="about.html" class="nav-link">
-                        About Me
+                    <a href="#about" class="nav-link">
+                        About                        
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="work.html" class="nav-link">
-                        My Works
+                    <a href="#skills" class="nav-link">
+                        Skills                        
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="contact.html" class="nav-link">
-                        Contact Me
+                    <a href="#services" class="nav-link">
+                        Services                        
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#social" class="nav-link">
+                        Social                        
                     </a>
                 </li>
             </ul>
         </nav>
+<!-- Hero section -->
+<section class="hero" id="home">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-xs-12">
+			
+			    <!-- Welcome -->
+			    <h4>Welcome to my website</h4>
+			    
+				<!-- Your Name Here -->
+				<h1>Zahid Shaikh</h1>
+
+				<!-- Your Position Title -->
+				<h3>Web Designer</h3>
+				
+				<!-- social icon links -->
+				<ul class="social">
+				    <li><a href=""><i class="fab fa-instagram" title="facebook"></i></a></li>
+				    <li><a href=""><i class="fab fa-twitter" title="twitter"></i></a></li>
+				    <li><a href=""><i class="fab fa-linkedin" title="Linkedin"></i></a></li>
+				    <li><a href=""><i class="fab fa-github" title="Instagram"></i></a></li>
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+</section>
     </header>
 
-    <main id="home">
-        <h1 class="lg-heading">
-            Zahid <span class="text-secondary">Shaikh</span>
-        </h1>
-        <h2 class="sm-heading">
-            Web Developer, Programmer, Designer & Entrepreneur
-        </h2>
-        <div class="icons">
-            <a href="https://twitter.com/ZahidIbrahimSh2">
-                <i class="fab fa-twitter fa-2x"></i>
-            </a>
-            <a href="https://www.instagram.com/thelonedruid47/?hl=en">
-                <i class="fab fa-instagram fa-2x"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/zahid-shaikh-7a4843178/">
-                <i class="fab fa-linkedin fa-2x"></i>
-            </a>
-            <a href="https://github.com/The-Lone-Druid">
-                <i class="fab fa-github fa-2x"></i>
-            </a>
+    <main>
+        <!-- Color-switcher Box -->
+        <div class="color-switcher"> 
+            <div class="switcher-btn">
+                <i class="fa fa-cog fa-spin fa-3x fa-fw gear-check"></i>
+            </div>    
+            <div class="color-option">
+                <p>Choose Favourite Colour</p>
+                <ul class="color-nav">
+                    <li>
+                        <i class="fa fa-circle fa-2x" id="darkblue" style="color: #6200ea;"  onclick="toggleTheme('darkblue')"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-circle fa-2x" id="green" style="color: #00c853;" onclick="toggleTheme('green')"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-circle fa-2x" id="blue" style="color: #2962ff;" onclick="toggleTheme('blue')"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-circle fa-2x"  id="darkpink" style="color: #c51162;" onclick="toggleTheme('darkpink')"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-circle fa-2x"  id="red" style="color: #D50000;" onclick="toggleTheme('red')"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-circle fa-2x"  id="orange" style="color: #ff6d00;" onclick="toggleTheme('orange')"></i>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </main>
-    <footer id="footer"></footer>
-    <script src="dist/js/main.js"></script>
-    <script src="dist/js/change-theme.js"></script>
+        <!-- About section -->
+        <section class="about section-outline" id="about">
+            <div class="container"> 
+            
+            <!-- Section-header -->
+            <div class="section-header text-center">
+                    <h2 class="title">About</h2> 
+            </div>
+            
+            <!-- Section-body -->
+            <div class="section-body">
+                <div class="row">
+                    
+                    <!-- Profile picture section -->
+                    <div class="col-md-4">
+                        <div class="profile-pic">
+                            
+                            <!-- Your profile picture here -->
+                            <img src="img/portrait.jpg" class="img-responsive" alt="Profile picture">
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- Overview and Informations section -->
+                    <div class="col-md-8">
+                        <h3 class="overview-title">Who am i</h3>
+                        <hr>
+                        <p class="about-p">My Name is Zahid Shaikh and I'm currently pursuing SY BCA (Science). I've learned a lot of things a previous year like Programming, Computer Fundamentals, Software Engineering, Software Development, etc. But I found no interest in all those stuff before I came to know what Web Development was, I learned HTML, CSS & JAVASCRIPT which made my mind more creative than ever. Then I learned Designing and Editing. Which helped me to achieve amazing Development of Websites & Web Apps with Responsive Designs.
+                        </p>
+                        <!-- Personal Informations -->
+                        <div class="about-info row text-center">
+
+                            <div class="col-sm-4 col-xs-12 info-container">
+                                <div class="info">    
+                                    <i class="fa fa-envelope"></i>
+                                    <h4>Email</h4>
+                                    <!-- email here -->
+                                    <h5 class="mail">zahid.786shaikh@gmail.com</h5>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4 col-xs-12 info-container">
+                                <div class="info">    
+                                    <i class="fa fa-mobile"></i>
+                                    <h4>Mobile</h4>
+                                    <!-- mobile no. here -->
+                                    <h5>+91 88065-044670</h5>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4 col-xs-12 info-container">
+                                <div class="info">    
+                                    <i class="fa fa-map-marker"></i>
+                                    <h4>Address</h4>
+                                    <!-- your address here -->
+                                    <h5>Maharashtra, INDIA</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end Personal Informations -->
+                    </div>
+                    <!-- end Overview and Informations -->
+                    
+                </div>   
+            </div>
+            <!-- end Section-body -->
+                
+            </div>
+        </section>
+        <!-- Skills section -->
+<section class="skills section-outline" id="skills">
+    <div class="container">
+       
+       <!-- Section-header -->
+        <div class="section-header text-center">
+            <h2 class="title">Skills</h2> 
+        </div>
+        
+        <!-- Section-body -->
+        <div class="section-body">
+            <div class="row">
+               
+                <div class="col-sm-6 col-xs-12">
+                   
+                    <!-- Skill no.1 -->
+                    <label class="skill-title">HTML / CSS</label>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 100%;" >
+                         <span class="sr-only"> 100% complete</span>
+                      </div>
+                   </div>
+                   
+                   <!-- Skill no.2 -->
+                    <label class="skill-title">JavaScript / jQuery</label>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;" >
+                         <span class="sr-only"> 70% complete</span>
+                      </div>
+                   </div>
+                   
+                   <!-- Skill no.3 -->
+                    <label class="skill-title">Bootstrap</label>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 100%;" >
+                         <span class="sr-only"> 100% complete</span>
+                      </div>
+                   </div>
+                   
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                   
+                   <!-- Skill no.4 -->
+                    <label class="skill-title">Figma</label>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;" >
+                         <span class="sr-only"> 70% complete</span>
+                      </div>
+                   </div>
+                   
+                   <!-- Skill no.5 -->
+                    <label class="skill-title">Adobe XD</label>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;" >
+                         <span class="sr-only"> 60% complete</span>
+                      </div>
+                   </div>
+                   
+                   <!-- Skill no.6 -->
+                    <label class="skill-title">Git & Github</label>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" >
+                         <span class="sr-only"> 80% complete</span>
+                      </div>
+                   </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <!-- end Section-body -->
+        
+    </div>
+</section>
+<!-- end Skills section -->
+
+
+
+<!-- Services section -->
+<section class="services section-outline" id="services">
+    <div class="container">
+        
+        <!-- Section-header -->
+        <div class="section-header text-center">
+            <h2 class="title">Services</h2> 
+        </div>
+        
+        <!-- Section-body -->
+        <div class="section-body text-center">
+           
+            <div class="row">
+               
+               <!-- Service no.1 -->
+                <div class="service-wrapper col-md-4 col-sm-6 col-xs-12">
+                    <div class="service">
+                       
+                        <!-- service icon -->
+                        <i class="service-icon fab fa-html5"></i>
+                        
+                        <!-- service title -->
+                        <h4 class="service-title">PSD-to-HTML</h4>
+                        
+                        <!-- service overview -->
+                        <p class="service-p">I'm a Skilled Developer & Designer and has the ability to convert Photoshop Document into HTML Document with 100% Efficiency.</p>
+                        
+                    </div>
+                </div>
+                
+                <!-- Service no.2 -->
+                <div class="service-wrapper col-md-4 col-sm-6 col-xs-12">
+                    <div class="service">
+                       
+                        <!-- service icon -->
+                        <i class="service-icon fa fa-pen"></i>
+                        
+                        <!-- service title -->
+                        <h4 class="service-title">UI/UX Design</h4>
+                        
+                        <!-- service overview -->
+                        <p class="service-p">I can make UI/UX Designes using tools like Adobe XD and Figma with amazing User Experience Interface.</p>
+                        
+                    </div>
+                </div>
+                
+                <!-- Service no.3 -->
+                <div class="service-wrapper col-md-4 col-sm-6 col-xs-12">
+                    <div class="service">
+                       
+                        <!-- service icon -->
+                        <i class="service-icon fab fa-wordpress"></i>
+                        
+                        <!-- service title -->
+                        <h4 class="service-title">PSD-to-WordPress</h4>
+                        
+                        <!-- service overview -->
+                        <p class="service-p">I also build commercial websites using Wordpress by Designing and Understanding PSD's.</p>   
+                    </div>
+                </div>
+                
+            
+               
+               <!-- Service no.4 -->
+                <div class="service-wrapper col-md-4 col-sm-6 col-xs-12">
+                    <div class="service">
+                       
+                        <!-- service icon -->
+                        <i class="service-icon fa fa-code"></i>
+                        
+                        <!-- service title -->
+                        <h4 class="service-title">Clean &amp; Valid code</h4>
+                        
+                        <!-- service overview -->
+                        <p class="service-p">Code I write are all mentioned with comments and are easily understandable by other developers.</p>
+                        
+                    </div>
+                </div>
+                
+                <!-- Service no.5 -->
+                <div class="service-wrapper col-md-4 col-sm-6 col-xs-12">
+                    <div class="service">
+                       
+                        <!-- service icon -->
+                        <i class="service-icon fa fa-cogs"></i>
+                        
+                        <!-- service title -->
+                        <h4 class="service-title">Easy to customize</h4>
+                        
+                        <!-- service overview -->
+                        <p class="service-p">Websites I build are easily customizable and maintanable.Quick service is also available.</p>
+                        
+                    </div>
+                </div>
+                
+                <!-- Service no.6 -->
+                <div class="service-wrapper col-md-4 col-sm-6 col-xs-12">
+                    <div class="service">
+                       
+                        <!-- service icon -->
+                        <i class="service-icon fa fa-tablet"></i>
+                        
+                        <!-- service title -->
+                        <h4 class="service-title">Fully Responsive</h4>
+                        
+                        <!-- service overview -->
+                        <p class="service-p">I design Responsive and Mobile First Websites using Bootstrap & Materialize which makes the website Reliable.</p>
+                        
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <!-- end Section-body -->
+        
+    </div>
+</section>
+<!-- end Services section -->
+
+
+<!-- Contact section -->
+<section class="contact section-outline" id="social">
+    <div class="container">
+        
+        <!-- Section-header -->
+        <div class="section-header text-center">
+            <h2 class="title">Social</h2> 
+        </div>
+        
+        <!-- Section-body -->
+        <div class="section-body">
+                
+                <!-- Social media section -->
+                <div class="social-media text-center">
+                    <p>You can find me on social media</p>
+                    <!-- social icon links -->
+                    <ul class="social">
+                        <li><a href=""><i class="fab fa-twitter" title="twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin" title="Linkedin"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram" title="Instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-github" title="Dribbble"></i></a></li>
+                    </ul>
+                </div>
+                
+                
+        </div>
+        <!-- end Section-body -->
+        
+    </div>
+</section>
+<!-- end Contact-me section -->
+<!-- scroll to top -->
+<a id="scroll-top" href="#" title="to top">
+    <i class="fa fa-angle-double-up"></i>
+</a>
+
+</main>
+
+<footer>                                                <!-- your name here -->
+    <h5 class="footer-title text-center"><span class="name">Zahid Sahikh</span> | Portfolio</h5>
+</footer>
+
+<script src="js/main.js"></script>
+
 </body>
 </html>
