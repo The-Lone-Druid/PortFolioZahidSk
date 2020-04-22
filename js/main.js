@@ -1,5 +1,4 @@
-//  Script for Menu Button
-const menuBtn = document.querySelector('.menuBtn');
+const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu-nav');
 
 let showMenu = false;
@@ -16,7 +15,7 @@ function toggleMenu() {
         showMenu = true;
 
     } else {
-
+        
         menuBtn.classList.remove('close');
         menu.classList.remove('show');
 
@@ -26,52 +25,44 @@ function toggleMenu() {
 
 }
 
-const colorSwitcher = document.querySelector('.switcher-btn');
-const colorPanel = document.querySelector('.color-switcher');
+function hideMenu() {
+    menuBtn.classList.remove('close');
+    menu.classList.remove('show');
 
-let showColor = false;
+    showMenu = false;
+}
 
-colorSwitcher.addEventListener('click', togglePalate);
+//Function to activate theme button 
 
+const themeBtn = document.querySelector('.switcher-btn');
+const colorPalette = document.querySelector('.color-switcher');
+const styleSheetAttr = document.querySelector('#styleSheetAttr');
 
-function togglePalate() {
+function changeTheme(themeColor) {
+    styleSheetAttr.setAttribute('href', themeColor);
+    console.log(themeColor);
+}
 
-    if(!showColor){
+themeBtn.addEventListener('click', showTheme);
 
-        colorPanel.classList.add('show');
+let themeView = false;
 
-        showColor = true;
+function showTheme() {
+
+    if(!themeView) {
+
+        colorPalette.classList.add('show');
+
+        themeView = true;
 
     } else {
         
-        colorPanel.classList.remove('show');
+        colorPalette.classList.remove('show');
 
-        showColor = false;
+        themeView = false;
 
     }
 
 }
 
-//Theme Changer Function
-
-let styleSheetTheme = document.querySelector("#styleSheetTheme");
-
-function toggleTheme(theme) {
-    console.log("clicked");
-    console.log(theme);
-    styleSheetTheme.setAttribute("href","css/"+theme+".css");
-}
-
-    // change style for sidebar-menu button when scroll after hero section ====================
-    
-    $(window).scroll(function(){
-        var scroll = $(window).scrollTop();
-        var screen = $(window).height();
-        if( scroll >= screen ) {
-            $('.btnLine').css("background","rgba(0,0,0,0.8)");
-        }
-        else {
-            $('.btnLine').css("background","white");
-        }
-    });
 

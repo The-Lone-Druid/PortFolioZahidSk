@@ -1,0 +1,523 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:600);
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/****************************************
+    CSS for Menu Button on Top Right
+****************************************/
+.menu-btn {
+  position: fixed;
+  padding: 10px;
+  right: 15px;
+  top: 15px;
+  border-radius: 5px;
+  z-index: 200;
+  background: #0097a7;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  cursor: pointer;
+}
+
+.menu-btn .btn-line {
+  height: 3px;
+  width: 28px;
+  margin-top: 5px;
+  background: white;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.menu-btn.close {
+  padding-right: 8px;
+}
+
+.menu-btn.close .btn-line:nth-child(1) {
+  -webkit-transform: rotate(45deg) translate(5px, 6px);
+          transform: rotate(45deg) translate(5px, 6px);
+}
+
+.menu-btn.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.close .btn-line:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translate(5px, -7px);
+          transform: rotate(-45deg) translate(5px, -7px);
+}
+
+/* ================
+     color-option box
+    ================ */
+.color-switcher {
+  position: fixed;
+  right: -175px;
+  top: 30vh;
+  width: 175px;
+  background: white;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+  z-index: 200;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.color-switcher h5 {
+  font-weight: 100;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 17px 0;
+  color: #fff;
+  background-color: #0097a7;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+}
+
+.color-switcher .switcher-btn {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: #0097a7;
+  text-align: center;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  z-index: 200;
+}
+
+.color-switcher .switcher-btn .gear-check {
+  color: #fff;
+  font-size: 30px;
+  line-height: 50px;
+}
+
+.color-switcher .colors {
+  padding: 10px;
+}
+
+.color-switcher .colors p {
+  font-weight: 100;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+.color-switcher .colors ul li {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.color-switcher.show {
+  right: 0;
+}
+
+/****************************************
+    CSS for Side Menu
+****************************************/
+body {
+  height: 3000px;
+  scroll-behavior: smooth;
+}
+
+.menu-nav {
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 25%;
+  z-index: 100;
+  -webkit-transform: translate3d(-110%, 0, 0);
+          transform: translate3d(-110%, 0, 0);
+}
+
+.menu-nav .portrait {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.3)), to(#0097a7)), url("../img/portrait.jpg") center center no-repeat;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), #0097a7), url("../img/portrait.jpg") center center no-repeat;
+  background-size: cover;
+  height: 35%;
+  margin: 10px auto;
+}
+
+.menu-nav .nav-item {
+  background: #0097a7;
+  margin: 15px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.menu-nav .nav-item .nav-link {
+  color: white;
+  font-size: 20px;
+  font-family: "Pacifico", cursive;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  border-radius: 5px;
+}
+
+.menu-nav .nav-item .nav-link:hover {
+  background: white;
+  color: #0097a7;
+}
+
+.menu-nav.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.menu-nav {
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+@media only screen and (max-width: 450px) {
+  .menu-nav {
+    width: 50%;
+    height: 100%;
+  }
+}
+
+/****************************************
+    CSS for introduction section
+****************************************/
+.introduction {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.3)), color-stop(65%, #0097a7)), url("../img/background-large.jpeg") center center no-repeat;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), #0097a7 65%), url("../img/background-large.jpeg") center center no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.introduction h4 {
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.introduction h1 {
+  padding: 10px;
+  font-family: "Raleway",sans-serif;
+  letter-spacing: 5px;
+}
+
+.introduction h2 {
+  font-family: Montserrat, "Raleway";
+  letter-spacing: 5px;
+  padding: 5px;
+}
+
+.introduction .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  letter-spacing: 30px;
+}
+
+.introduction .icons a {
+  color: white;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.introduction .icons a:hover {
+  color: black;
+}
+
+.introduction .to-about {
+  margin: 30px auto;
+  text-align: center;
+  width: 20%;
+}
+
+.introduction .to-about a {
+  color: white;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.introduction .to-about a:hover {
+  color: black;
+}
+
+@media only screen and (max-width: 775px) {
+  .introduction {
+    background: -webkit-gradient(linear, right top, left top, from( rgb(216, 27, 96, 0.8)), to( rgb(216, 27, 96, 0.8))), url("../img/background-large.jpeg") center center no-repeat;
+    background: linear-gradient(to left,  rgb(216, 27, 96, 0.8),  rgb(216, 27, 96, 0.8)), url("../img/background-large.jpeg") center center no-repeat;
+    background-attachment: fixed;
+  }
+  .introduction .container-sm {
+    text-align: center;
+  }
+  .introduction h4 {
+    font-size: 20px;
+  }
+  .introduction h1 {
+    font-size: 50px;
+  }
+  .introduction h2 {
+    font-size: 35px;
+  }
+  .introduction .icons {
+    padding-top: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 30px;
+  }
+}
+
+/****************************************
+    CSS for about section
+****************************************/
+.about {
+  height: 100vh;
+  background: white;
+}
+
+.about .title {
+  border-bottom: 5px solid #0097a7;
+  font-family: Montserrat, "Raleway";
+  text-shadow: 10px 10px 8px grey;
+}
+
+.about .portrait {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.3)), to(#0097a7)), url("../img/portrait.jpg") center center no-repeat;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), #0097a7), url("../img/portrait.jpg") center center no-repeat;
+  background-size: cover;
+  height: 324px;
+  width: 324px;
+  margin: 50px auto;
+}
+
+.about h3 {
+  border-bottom: .5px solid grey;
+  padding: 3px;
+}
+
+.about .info {
+  font-family: "Raleway";
+  margin-top: 50px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 775px) {
+  .about {
+    height: auto;
+  }
+  .about .info {
+    text-align: center;
+  }
+  .title {
+    padding-top: 30px;
+    font-size: 50px;
+  }
+}
+
+/****************************************
+    CSS for skills section
+****************************************/
+.skills {
+  height: 100vh;
+  background: gainsboro;
+}
+
+/****************************************
+    CSS for services section
+****************************************/
+.services {
+  height: 100vh;
+  background: white;
+}
+
+/****************************************
+    CSS for contact section
+****************************************/
+.contact {
+  height: 100vh;
+  background: gainsboro;
+}
+
+/****************************************
+    CSS for social section
+****************************************/
+.social {
+  height: 100vh;
+  background: white;
+}
+/****************************************
+    CSS for skills section
+****************************************/
+.skills {
+  height: 100vh;
+  background: gainsboro;
+}
+
+.skills .title {
+  border-bottom: 5px solid #0097a7;
+  font-family: Montserrat, "Raleway";
+  text-shadow: 10px 10px 8px grey;
+}
+
+.skills .progress-bar {
+  background: #0097a7;
+}
+
+@media only screen and (max-width: 775px) {
+  .skills {
+    height: auto;
+  }
+  .title {
+    padding-top: 30px;
+    font-size: 50px;
+  }
+}
+
+/****************************************
+    CSS for services section
+****************************************/
+.services {
+  height: 100vh;
+  background: white;
+}
+
+.services .title {
+  border-bottom: 5px solid #0097a7;
+  font-family: Montserrat, "Raleway";
+  text-shadow: 10px 10px 8px grey;
+}
+
+.services i {
+  color: #0097a7;
+}
+
+@media only screen and (max-width: 775px) {
+  .services {
+    height: auto;
+  }
+  .title {
+    padding-top: 30px;
+    font-size: 50px;
+  }
+}
+
+/****************************************
+    CSS for contact section
+****************************************/
+.contact {
+  height: 100vh;
+  background: gainsboro;
+}
+
+.contact .title {
+  border-bottom: 5px solid #0097a7;
+  font-family: Montserrat, "Raleway";
+  text-shadow: 10px 10px 8px grey;
+}
+
+.contact i {
+  color: #0097a7;
+}
+
+@media only screen and (max-width: 775px) {
+  .services {
+    height: auto;
+  }
+  .title {
+    padding-top: 30px;
+    font-size: 50px;
+  }
+}
+
+/****************************************
+    CSS for social section
+****************************************/
+.social {
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url("../img/social media.jpg") center center no-repeat;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../img/social media.jpg") center center no-repeat;
+}
+
+.social .title {
+  border-bottom: 5px solid #0097a7;
+  font-family: Montserrat, "Raleway";
+  text-shadow: 10px 10px 8px grey;
+}
+
+.social .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 30px;
+  padding: 20px;
+}
+
+.social .social-icons a {
+  color: black;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.social .social-icons a:hover {
+  color: #0097a7;
+}
+
+@media only screen and (max-width: 775px) {
+  .social {
+    height: auto;
+  }
+  .title {
+    padding-top: 30px;
+    font-size: 50px;
+  }
+}
+
+footer {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer h6 {
+  color: #0097a7;
+  font-size: 20px;
+}
+/*# sourceMappingURL=main.css.map */

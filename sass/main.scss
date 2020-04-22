@@ -1,0 +1,463 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:600);
+
+$themeColor1: #8e24aa ;
+$themeColor2: #d81b60 ;
+$themeColor3: #e53935 ;
+$themeColor4: #fb8c00 ;
+$themeColor5: #0097a7 ;
+$themeColor6: #43a047 ;
+
+$primaryColor: white;
+$secondaryColor: black;
+$ternaryColor: rgb(220, 220, 220);
+
+html {
+    scroll-behavior: smooth;
+  }
+
+* {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+/****************************************
+    CSS for Menu Button on Top Right
+****************************************/
+
+.menu-btn {
+    position: fixed;
+    padding: 10px;
+    right: 15px;
+    top: 15px;    
+    border-radius: 5px;
+    z-index: 200;
+    background: $themeColor1;
+    transition: all .5s ease-out;
+    cursor: pointer;
+
+    .btn-line {
+        height: 3px;
+        width: 28px;
+        margin-top: 5px;
+        background: $primaryColor;
+        transition: all .5s ease-out;  
+    }
+
+    &.close {
+        padding-right: 8px;
+    }
+
+    &.close .btn-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    &.close .btn-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    &.close .btn-line:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -7px);
+    }
+}
+
+
+/* ================
+     color-option box
+    ================ */
+.color-switcher {
+    position: fixed;
+    right: -175px;
+    top: 30vh;
+    width: 175px;
+    background: $primaryColor;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+    z-index: 200;
+    transition: 0.3s;
+    }
+    .color-switcher h5 {
+    font-weight: 100;
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    padding: 17px 0;
+    color: #fff;
+    background-color: $themeColor1;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+    }
+    .color-switcher .switcher-btn {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: $themeColor1;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    z-index: 200;
+    }
+    .color-switcher .switcher-btn .gear-check {
+    color: #fff;
+    font-size: 30px;
+    line-height: 50px;
+    }
+    .color-switcher .colors {
+    padding: 10px;
+    }
+    .color-switcher .colors p {
+    font-weight: 100;
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    }
+    .color-switcher .colors ul li {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    }
+    
+    .color-switcher.show {
+    right: 0;
+    }
+    
+
+
+
+/****************************************
+    CSS for Side Menu
+****************************************/
+body {
+    height: 3000px;
+    scroll-behavior: smooth;
+}
+
+.menu-nav {
+    background: $primaryColor;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 25%;
+    z-index: 100;
+    transform: translate3d(-110%, 0, 0);
+    
+    .portrait {
+        background: linear-gradient(to left , rgba(0, 0, 0, 0.3),  $themeColor1 ), url('../img/portrait.jpg') center center no-repeat;
+        background-size: cover;
+        height: 35%;
+        margin: 10px auto;
+    }
+    
+    .nav-item {
+        background: $themeColor1;
+        margin: 15px;
+        text-align: center;
+        border-radius: 5px;
+
+        .nav-link {
+            color: white;
+            font-size: 20px;
+            font-family: "Pacifico", cursive;
+            transition: all .5s ease-out;
+            border-radius: 5px;
+        
+            &:hover {
+                background: white;
+                color: $themeColor1;
+            }
+        }
+    }
+
+    &.show {
+        transform: translate3d(0, 0, 0);
+    }
+
+    & {
+        margin: 0;
+        padding: 0;
+        transition: all .5s ease-out;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .menu-nav {
+        width: 50%;
+        height: 100%;
+    }
+}
+
+/****************************************
+    CSS for introduction section
+****************************************/
+
+.introduction {
+    background: linear-gradient(to left , rgba(0, 0, 0, 0.3),  $themeColor1 ), url('../img/background-large.jpeg') center center no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h4 {
+        font-family: "Pacifico", cursive;
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+
+    h1 {
+        padding: 10px;
+        font-family: "Raleway",sans-serif;
+        letter-spacing: 5px;
+    }
+    
+    h2 {
+        font-family: Montserrat, "Raleway";
+        letter-spacing: 5px;
+        padding: 5px;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: flex-start;    
+        letter-spacing: 30px;
+
+        a {
+            color: white;
+            transition: all .5s ease-out;
+
+            &:hover {
+                color: $secondaryColor;
+            }
+        }
+    }
+
+    .to-about {
+        margin: 30px auto;
+        text-align: center;
+        width: 20%;
+        
+        a {
+            color: white;
+            transition: all .5s ease-out;
+
+            &:hover {
+                color: $secondaryColor;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 775px) {
+    .introduction {
+        background: linear-gradient(to left , rgba(142, 36, 170, 0.8), rgba(142, 36, 170, 0.8)), url('../img/background-large.jpeg') center center no-repeat;
+        background-attachment: fixed;
+    
+        .container-sm {
+            text-align: center;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+    
+        h1 {
+            font-size: 50px;
+        }
+        
+        h2 {
+            font-size: 35px;
+        }
+        
+        .icons {
+            padding-top: 30px;
+            justify-content: center;
+            padding-left: 30px;
+        }
+    }
+}
+
+/****************************************
+    CSS for about section
+****************************************/
+
+.about {
+    height: 100vh;
+    background: $primaryColor;
+    .title {
+        border-bottom: 5px solid $themeColor1;
+        font-family: Montserrat, "Raleway";
+        text-shadow: 10px 10px 8px grey;
+    }
+    .portrait {
+        background: linear-gradient(to left , rgba(0, 0, 0, 0.3),  $themeColor1 ), url('../img/portrait.jpg') center center no-repeat;
+        background-size: cover;
+        height: 324px;
+        width: 324px;
+        margin: 50px auto;  
+    }
+    h3 {
+        border-bottom: .5px solid grey;
+        padding: 3px;
+    }
+    .info {
+        font-family: "Raleway";
+        margin-top: 50px;   
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 775px) {
+    .about {
+        height: auto;
+        .info {
+            text-align: center;
+        }
+    }
+    .title {
+        padding-top: 30px;
+        font-size: 50px;
+    }
+}
+
+/****************************************
+    CSS for skills section
+****************************************/
+   
+.skills {
+    height: 100vh;
+    background: $ternaryColor;
+    .title {
+        border-bottom: 5px solid $themeColor1;
+        font-family: Montserrat, "Raleway";
+        text-shadow: 10px 10px 8px grey;
+    }
+    .progress-bar {
+        background: $themeColor1;
+    }
+}
+
+@media only screen and (max-width: 775px) {
+    .skills {
+        height: auto;
+    }
+    .title {
+        padding-top: 30px;
+        font-size: 50px;
+    }
+}
+
+/****************************************
+    CSS for services section
+****************************************/
+
+.services {
+    height: 100vh;
+    background: $primaryColor;
+        .title {
+            border-bottom: 5px solid $themeColor1;
+            font-family: Montserrat, "Raleway";
+            text-shadow: 10px 10px 8px grey;
+        }
+        i {
+            color: $themeColor1;
+        }
+}
+
+    
+@media only screen and (max-width: 775px) {
+    .services {
+        height: auto;
+    }
+    .title {
+        padding-top: 30px;
+        font-size: 50px;
+    }
+}
+/****************************************
+    CSS for contact section
+****************************************/
+
+.contact {
+    height: 100vh;
+    background: $ternaryColor;
+    .title {
+        border-bottom: 5px solid $themeColor1;
+        font-family: Montserrat, "Raleway";
+        text-shadow: 10px 10px 8px grey;
+    }
+    i {
+        color: $themeColor1;
+    }
+    
+}
+
+    
+@media only screen and (max-width: 775px) {
+    .services {
+        height: auto;
+    }
+    .title {
+        padding-top: 30px;
+        font-size: 50px;
+    }
+}
+
+
+/****************************************
+    CSS for social section
+****************************************/
+
+.social {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../img/social\ media.jpg') center center no-repeat;
+    .title {
+        border-bottom: 5px solid $themeColor1;
+        font-family: Montserrat, "Raleway";
+        text-shadow: 10px 10px 8px grey;
+    }
+        .social-icons {
+        display: flex;
+        justify-content: center;    
+        letter-spacing: 30px;
+        padding: 20px;
+
+        a {
+            color: black;
+            transition: all .5s ease-out;
+
+            &:hover {
+                color: $themeColor1
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 775px) {
+    .social {
+        height: auto;
+    }
+    .title {
+        padding-top: 30px;
+        font-size: 50px;
+    }
+}
+
+
+
+footer {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h6 {
+        color: $themeColor1;
+        font-size: 20px;
+    }
+}
