@@ -15,7 +15,7 @@ html {
 }
 
 /****************************************
-    CSS for Menu Button on Top Right
+CSS for Menu Button on Top Right
 ****************************************/
 .menu-btn {
   position: fixed;
@@ -199,8 +199,8 @@ body {
     CSS for introduction section
 ****************************************/
 .introduction {
-  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.3)), color-stop(65%, #43a047)), url("../img/background-large.jpeg") center center no-repeat;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), #43a047 65%), url("../img/background-large.jpeg") center center no-repeat;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.3)), to(#43a047)), url("../img/background-large.jpeg") center center no-repeat;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), #43a047), url("../img/background-large.jpeg") center center no-repeat;
   height: 100vh;
   width: 100%;
   background-attachment: fixed;
@@ -271,8 +271,8 @@ body {
 
 @media only screen and (max-width: 775px) {
   .introduction {
-    background: -webkit-gradient(linear, right top, left top, from( rgb(216, 27, 96, 0.8)), to( rgb(216, 27, 96, 0.8))), url("../img/background-large.jpeg") center center no-repeat;
-    background: linear-gradient(to left,  rgb(216, 27, 96, 0.8),  rgb(216, 27, 96, 0.8)), url("../img/background-large.jpeg") center center no-repeat;
+    background: -webkit-gradient(linear, right top, left top, from(rgba(67, 160, 71, 0.8)), to(rgba(67, 160, 71, 0.8))), url("../img/background-large.jpeg") center center no-repeat;
+    background: linear-gradient(to left, rgba(67, 160, 71, 0.8), rgba(67, 160, 71, 0.8)), url("../img/background-large.jpeg") center center no-repeat;
     background-attachment: fixed;
   }
   .introduction .container-sm {
@@ -351,37 +351,6 @@ body {
   background: gainsboro;
 }
 
-/****************************************
-    CSS for services section
-****************************************/
-.services {
-  height: 100vh;
-  background: white;
-}
-
-/****************************************
-    CSS for contact section
-****************************************/
-.contact {
-  height: 100vh;
-  background: gainsboro;
-}
-
-/****************************************
-    CSS for social section
-****************************************/
-.social {
-  height: 100vh;
-  background: white;
-}
-/****************************************
-    CSS for skills section
-****************************************/
-.skills {
-  height: 100vh;
-  background: gainsboro;
-}
-
 .skills .title {
   border-bottom: 5px solid #43a047;
   font-family: Montserrat, "Raleway";
@@ -448,13 +417,19 @@ body {
   color: #43a047;
 }
 
+.contact h3 {
+  font-size: 20px;
+  font-family: Raleway;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 775px) {
-  .services {
+  .contacr {
     height: auto;
   }
   .title {
     padding-top: 30px;
-    font-size: 50px;
+    font-size: 30px;
   }
 }
 
@@ -480,7 +455,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   letter-spacing: 30px;
-  padding: 20px;
 }
 
 .social .social-icons a {
@@ -497,14 +471,16 @@ body {
   .social {
     height: auto;
   }
-  .title {
-    padding-top: 30px;
-    font-size: 50px;
+  .social .title {
+    font-size: 30px;
+  }
+  .social h3 {
+    font-size: 18px;
   }
 }
 
 footer {
-  height: 80px;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

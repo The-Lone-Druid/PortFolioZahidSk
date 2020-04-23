@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link id="styleSheetAttr" rel="stylesheet" href="sass/main.css">    
+    <link id="styleSheetAttr" rel="stylesheet" href="../sass/main.css">    
     <title>Zahid Shaikh | Portfolio</title>
 </head>
 <body>
@@ -57,6 +57,9 @@
     </header>
 
     <main>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-double-up fa-2x"></i></button>
+
         <section class="introduction" id="home">
             <div class="color-switcher"> 
                 <h5 class="text-center">Color Options</h5>
@@ -67,12 +70,12 @@
                     <p>Choose your favourite colour</p>
                     <hr>
                     <ul>
-                        <li onclick="changeTheme('sass/main.css')"><i class="fa fa-cog fa-spin fa-2x fa-fw gear-check" style="color: #8e24aa;"></i></li>
-                        <li onclick="changeTheme('sass/themeColor2.css')"><i class="fa fa-cog fa-spin fa-2x fa-fw gear-check" style="color: #d81b60;"></i></li>
-                        <li onclick="changeTheme('sass/themeColor3.css')"><i class="fa fa-cog fa-spin fa-2x fa-fw gear-check" style="color: #e53935;"></i></li>
-                        <li onclick="changeTheme('sass/themeColor4.css')"><i class="fa fa-cog fa-spin fa-2x fa-fw gear-check" style="color: #fb8c00;"></i></li>
-                        <li onclick="changeTheme('sass/themeColor5.css')"><i class="fa fa-cog fa-spin fa-2x fa-fw gear-check" style="color: #0097a7;"></i></li>
-                        <li onclick="changeTheme('sass/themeColor6.css')"><i class="fa fa-cog fa-spin fa-2x fa-fw gear-check" style="color: #43a047;"></i></li>
+                        <li onclick="changeTheme('../sass/main.css')"><i class="fa fa-cog fa-spin fa-2x fa-fw gear-check" style="color: #8e24aa;"></i></li>
+                        <li onclick="changeTheme('../sass/themeColor2.css')"><i class="fa fa-cog fa-spin fa-2x fa-fw gear-check" style="color: #d81b60;"></i></li>
+                        <li onclick="changeTheme('../sass/themeColor3.css')"><i class="fa fa-cog fa-spin fa-2x fa-fw gear-check" style="color: #e53935;"></i></li>
+                        <li onclick="changeTheme('../sass/themeColor4.css')"><i class="fa fa-cog fa-spin fa-2x fa-fw gear-check" style="color: #fb8c00;"></i></li>
+                        <li onclick="changeTheme('../sass/themeColor5.css')"><i class="fa fa-cog fa-spin fa-2x fa-fw gear-check" style="color: #0097a7;"></i></li>
+                        <li onclick="changeTheme('../sass/themeColor6.css')"><i class="fa fa-cog fa-spin fa-2x fa-fw gear-check" style="color: #43a047;"></i></li>
                     </ul>
                 </div>
         </div>
@@ -81,10 +84,10 @@
                 <h1 class="display-2">Zahid Shaikh</h1>
                 <h2 class="display-4">Web Designer</h2>
                 <div class="container icons">
-                    <a href="#"><i class="fab fa-github fa-2x"></i></a>
-                    <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-                    <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                    <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="https://github.com/The-Lone-Druid"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://www.instagram.com/thelonedruid47/?hl=en"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="https://twitter.com/ZahidIbrahimSh2"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/zahid-shaikh-7a4843178/"><i class="fab fa-linkedin fa-2x"></i></a>
                 </div>
                 <div class="to-about">
                     <a href="#about"><i class="fas fa-angle-double-down fa-5x"></i></a>
@@ -205,7 +208,7 @@
                     <div class="service-wrapper col-md-4 col-sm-6 col-xs-12 my-3">
                         <i class="fa fa-cogs fa-4x"></i>
                         <h4>Easy to Customize</h4>
-                        <p class="text-muted">If any Future update or any kind a change is required on the website, It's a lot easier to customize without disturbing any other components in the website.</p>
+                        <p class="text-muted">If any updates are some changes are required for the Dynamic Websites. I Develope them in such a way so that they can be Customized easily.</p>
                     </div>
                     <div class="service-wrapper col-md-4 col-sm-6 col-xs-12 my-3">
                         <i class="fa fa-tablet fa-4x"></i>
@@ -220,15 +223,15 @@
             <div class="container p-3 text-center">
                 <h1 class="display-2 title">Contact Details</h1>
                 <div class="row">
-                    <div class="col-md-12 my-3 shadow-lg p-2">
+                    <div class="col-md-12 my-3 shadow-lg p-2 bg-light">
                         <i class="fas fa-envelope fa-4x"></i>
                         <h3>TheLoneDruid47@gmail.com</h3>
                     </div>
-                    <div class="col-md-12 my-3 shadow-lg p-2">
+                    <div class="col-md-12 my-3 shadow-lg p-2 bg-light">
                         <i class="fas fa-mobile fa-4x"></i>
                         <h3>+91 8806544670</h3>
                     </div>
-                    <div class="col-md-12 my-3 shadow-lg p-2">
+                    <div class="col-md-12 my-3 shadow-lg p-2 bg-light">
                         <i class="fa fa-location-arrow fa-4x"></i>
                         <h3>Pune - Maharashtra, India</h3>
                     </div>
@@ -238,13 +241,13 @@
 
         <section class="social shadow-lg" id="social">
             <div class="container p-3 text-center">
-                <h1 class="display-2 title p-5">Contact Details</h1>
+                <h1 class="display-2 title">Social</h1>
                 <h3>YOU CAN FIND ME ON SOCIAL MEDIA</h3>
-                <div class="container social-icons">
-                    <a href="#"><i class="fab fa-github fa-3x"></i></a>
-                    <a href="#"><i class="fab fa-instagram fa-3x"></i></a>
-                    <a href="#"><i class="fab fa-twitter fa-3x"></i></a>
-                    <a href="#"><i class="fab fa-linkedin fa-3x"></i></a>
+                <div class="container social-icons py-5">
+                    <a href="https://github.com/The-Lone-Druid"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://www.instagram.com/thelonedruid47/?hl=en"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="https://twitter.com/ZahidIbrahimSh2"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/zahid-shaikh-7a4843178/"><i class="fab fa-linkedin fa-2x"></i></a>
                 </div>
             </div>
         </section>
@@ -257,6 +260,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
