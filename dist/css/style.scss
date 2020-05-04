@@ -433,7 +433,7 @@ section {
         color: $primary;
         font-family: $font-montserrat;
 
-        h4 {
+        h6 {
             padding: 5px;
         }
 
@@ -445,6 +445,11 @@ section {
             width: 100%;
             outline: none;
             padding: 10px;
+        }
+
+        button {
+            width: 100%;
+            color: $primary;
         }
     }
 }

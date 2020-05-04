@@ -387,7 +387,7 @@ section {
   font-family: "Montserrat", sans-serif;
 }
 
-.contact .contact-form h4 {
+.contact .contact-form h6 {
   padding: 5px;
 }
 
@@ -399,6 +399,11 @@ section {
   width: 100%;
   outline: none;
   padding: 10px;
+}
+
+.contact .contact-form button {
+  width: 100%;
+  color: white;
 }
 
 /* ================
