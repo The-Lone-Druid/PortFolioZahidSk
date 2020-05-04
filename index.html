@@ -309,7 +309,6 @@
                 <h1 class="title py-3 text-center">Contact Me</h1>
                 
                 <div class="contact-container">
-                    <form action="https://formspree.io/your@email.com" name="input" method="POST">
                         <div class="row">
                             <div class="col-md-6 text-center">
                                 <i class="fas fa-envelope fa-3x"></i>
@@ -320,6 +319,7 @@
                                 <h5 class="py-3">INDIA , Maharashtra - Pune</h5>
                             </div>
                             <div class="col-md-6 contactBackground contact-form">
+                            <form action="https://formspree.io/your@email.com" name="input" method="POST">
                                 <h4>Name</h4>
                                 <input type="text" name="Name" placeholder="Your Name" class="form-control-cst" required>
                                 <h4>Email</h4>
@@ -327,11 +327,11 @@
                                 <h4>Your Message</h4>
                                 <textarea name="message" placeholder="What's on your mind" cols="30" rows="3" class="form-control-cst"></textarea>
                                 <input type="submit" value="Send" >
-                                <input type="hidden" name="_subject" value="Enter your subject here"/>
+                                <input type="hidden" name="_subject" value="New Message from your Website"/>
                                 <input type="hidden" name="_next" value="thanks.html"/>
+                            </form>                                
                             </div>
                         </div>
-                    </form>
                 </div>
 
             </div>
