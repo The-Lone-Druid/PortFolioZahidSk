@@ -18,6 +18,7 @@
   ********************************/
   html {
     scroll-behavior: smooth;
+    transition: all 2s ease-out;
   }
   
   body {
@@ -381,6 +382,13 @@
     background: rgb(145, 189, 58);
     border-radius: 10px;
   }
+
+  .contact-title {
+    font-weight: 300;
+    text-align: center;
+    padding: 3px;
+    margin: 3px;
+}
   
   .contact i {
     color: rgb(145, 189, 58);
@@ -440,7 +448,7 @@
   
   .social-container {
     /* Background-image for social section here */
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") center center no-repeat;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") center center no-repeat;
     background-size: cover;
   }
   

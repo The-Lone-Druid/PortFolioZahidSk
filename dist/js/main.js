@@ -71,7 +71,7 @@ function topFunction() {
     $('.gear-check').on('click',function(){
       $('.color-switcher').toggleClass('on'); 
    });
-   
+
    var colorLi = $('.colors ul li');
    
        colorLi
@@ -84,7 +84,9 @@ function topFunction() {
    
    colorLi.on('click',function(){
        
-    //Change color once clicked
+    //Change Theme of page
        document.getElementById('styleSheetTheme').setAttribute('href', $(this).attr('data-value'));
+    //Change color of navbar
+       document.getElementById('phoneNavBar').setAttribute('content', $(this).attr('data-color'));
        
    });
