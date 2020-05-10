@@ -88,5 +88,7 @@ function topFunction() {
        document.getElementById('styleSheetTheme').setAttribute('href', $(this).attr('data-value'));
     //Change color of navbar
        document.getElementById('phoneNavBar').setAttribute('content', $(this).attr('data-color'));
+       document.getElementById('phoneNavBar1').setAttribute('content', $(this).attr('data-color'));
+       document.getElementById('phoneNavBar2').setAttribute('content', $(this).attr('data-color'));
        
    });
