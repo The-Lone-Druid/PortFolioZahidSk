@@ -181,7 +181,7 @@ section {
     CSS for Hero Section
 ********************************/
 .hero {
-  background: -webkit-gradient(linear, left top, right top, color-stop(40%, black), to(rgba(0, 0, 0, 0))), url("../images/figma 2.jpg") center center no-repeat;
+  background: -webkit-gradient(linear, left top, right top, color-stop(40%, black), to(rgba(0, 0, 0, 0))), url("../images/background-large.jpeg") center center no-repeat;
   background: linear-gradient(to right, black 40%, rgba(0, 0, 0, 0)), url("../images/figma 2.jpg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
