@@ -33,11 +33,11 @@ section {
 ********************************/
 ::-webkit-scrollbar {
   width: 10px;
-  background: black;
+  background:red;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: white;
+  background: red;
   border-radius: 20px;
   border: 1px solid black;
 }
